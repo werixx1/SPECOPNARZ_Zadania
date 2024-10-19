@@ -9,3 +9,17 @@ def is_criticality_balanced(temp, neutrons):
   return True
 
 print(is_criticality_balanced(750, 600), is_criticality_balanced(100,200))
+# ZADANIE 2
+def reactor_efficiency(voltage, current, theoretical_max_power):
+  generated_power = voltage*current
+  spr = (generated_power/theoretical_max_power)*100
+  if spr >= 80:
+    return 'zielony'
+  elif spr < 80 and spr >= 60:
+    return 'pomaranczowy'
+  elif spr < 60 and spr >= 30:
+    return 'czerwony'
+  else:
+    return 'czarny'
+
+print(reactor_efficiency(1,2,32))
