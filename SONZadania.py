@@ -7,8 +7,8 @@ def is_criticality_balanced(temp, neutrons):
   if (temp*neutrons) > 500000:
     return False
   return True
-
 print(is_criticality_balanced(750, 600), is_criticality_balanced(100,200))
+
 # ZADANIE 2
 def reactor_efficiency(voltage, current, theoretical_max_power):
   generated_power = voltage*current
@@ -21,8 +21,8 @@ def reactor_efficiency(voltage, current, theoretical_max_power):
     return 'czerwony'
   else:
     return 'czarny'
-
 print(reactor_efficiency(1,2,32))
+
 # ZADANIE 3
 def fail_safe(kelwiny, neutrony_produkowane_na_sekunde, prog):
   stan = kelwiny*neutrony_produkowane_na_sekunde
@@ -30,5 +30,4 @@ def fail_safe(kelwiny, neutrony_produkowane_na_sekunde, prog):
     return 'LOW'
   elif stan < (prog*0.9) or stan > (prog*1.1):
     return 'NORMAL'
-
 print(fail_safe(2,2,2))
