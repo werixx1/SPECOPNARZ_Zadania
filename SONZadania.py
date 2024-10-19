@@ -23,3 +23,12 @@ def reactor_efficiency(voltage, current, theoretical_max_power):
     return 'czarny'
 
 print(reactor_efficiency(1,2,32))
+# ZADANIE 3
+def fail_safe(kelwiny, neutrony_produkowane_na_sekunde, prog):
+  stan = kelwiny*neutrony_produkowane_na_sekunde
+  if stan < (0.9*prog):
+    return 'LOW'
+  elif stan < (prog*0.9) or stan > (prog*1.1):
+    return 'NORMAL'
+
+print(fail_safe(2,2,2))
